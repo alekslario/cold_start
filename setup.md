@@ -23,6 +23,12 @@ exec -l $SHELL
 gcloud init
 gcloud auth application-default login
 
+# Install AWS cli
+
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+
 # Install terraform
 
 wget -O - https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
